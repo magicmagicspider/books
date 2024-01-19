@@ -124,7 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend/dist/assets"),
+    os.path.join(BASE_DIR, "frontend/dist/static"),
 ]
 
 # Default primary key field type
