@@ -19,11 +19,16 @@
     </div>
 </template>
 
-<script setup>
-import { useRouter } from 'vue-router';
-const router = useRouter()
-const goto = () => {
-    router.push('/Home')
+<script>
+import { mapState } from 'vuex';
+export default {
+    created () {
+        console.log(this.$store.state.count);
+    },
+    computed: {
+        ...mapState(['count','test'])
+        
+    }
 }
 </script>
 

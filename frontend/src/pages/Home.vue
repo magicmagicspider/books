@@ -3,7 +3,7 @@
         <div class="sidebar">
             <ul class="sidebar-ul">
                 <li class="logo">
-                    <RouterLink to="/home">V1.0</RouterLink>
+                    <RouterLink to="/home">{{appVersion}}</RouterLink>
                 </li>
                 <li>
                     <IconPark type="document-folder" theme="outline" size="20" fill="#999494" class="IconPark" />
@@ -55,11 +55,15 @@
 import { IconPark } from "@icon-park/vue-next/es/all";
 import { RouterView } from "vue-router";
 import pop_up_win from "../components/pop_up_win.vue"
+import { mapState } from "vuex";
 export default {
     components: {
         IconPark: IconPark,
         RouterView,
         pop_up_win
+    },
+    computed: {
+        ...mapState(['appVersion'])
     },
     data() {
         return {
